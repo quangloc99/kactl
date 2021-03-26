@@ -4,7 +4,7 @@
  * License: CC0
  * Source: N/A
  * Description: Flow algorithm with guaranteed complexity $O(VE^2)$. To get edge flow values, compare
- * capacities before and after, and take the positive values only.
+ * capacities before and after, and take the positive values only. \\
  * Status: stress-tested
  */
 #pragma once

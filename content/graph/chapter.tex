@@ -3,20 +3,20 @@
 \section{Fundamentals}
 	\kactlimport{BellmanFord.h}
 	\kactlimport{FloydWarshall.h}
-	\kactlimport{TopoSort.h}
+	%\kactlimport{TopoSort.h}  % this use bfs instead of dfs, might consider to add
 
 \section{Network flow}
 	\kactlimport{PushRelabel.h}
-	\kactlimport{MinCostMaxFlow.h}
+	\kactlimport{MinCostMaxFlow.h}  % it uses __gnu_pbds::priority_queue for updating value
 	\kactlimport{EdmondsKarp.h}
-	% \kactlimport{Dinic.h}
+	\kactlimport{Dinic.h}
 	\kactlimport{MinCut.h}
 	\kactlimport{GlobalMinCut.h}
-	\kactlimport{GomoryHu.h}
+	\kactlimport{GomoryHu.h}  % no clue what this is
 
 \section{Matching}
 	\kactlimport{hopcroftKarp.h}
-	\kactlimport{DFSMatching.h}
+	\kactlimport{DFSMatching.h}  % this is Kuhn's algorithm but with different style, my brain hurt a bit
 	\kactlimport{MinimumVertexCover.h}
 	\kactlimport{WeightedMatching.h}
 	\kactlimport{GeneralMatching.h}
@@ -25,7 +25,7 @@
 	\kactlimport{SCC.h}
 	\kactlimport{BiconnectedComponents.h}
 	\kactlimport{2sat.h}
-	\kactlimport{EulerWalk.h}
+	% \kactlimport{EulerWalk.h} % seem short and efficient but I have an ok version
 
 \section{Coloring}
 	\kactlimport{EdgeColoring.h}
@@ -36,10 +36,10 @@
 	\kactlimport{MaximumIndependentSet.h}
 
 \section{Trees}
-	\kactlimport{BinaryLifting.h}
-	\kactlimport{LCA.h}
-	\kactlimport{CompressTree.h}
-	\kactlimport{HLD.h}
+	% \kactlimport{BinaryLifting.h}  % primitive
+	% \kactlimport{LCA.h}            % primitive
+	% \kactlimport{CompressTree.h}   % this seems cool but require LCA, RMQ, and seems to not have common use cases.
+	% \kactlimport{HLD.h}            % can be improvised
 	\kactlimport{LinkCutTree.h}
 	\kactlimport{DirectedMST.h}
 
