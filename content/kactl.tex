@@ -2,21 +2,22 @@
 \usepackage{kactlpkg}
 \kactlcontentdir{content}
 
-\university{KTH}{KTH Royal Institute of Technology}{kth}
-\team{Omogen Heap}{Simon Lindholm, Johan Sannemo, Mårten Wiman}
+\university{ITMO university (Maxim Kuzin, Loc Tran, Semyon Stepanov)}{ITMO university}{kth}
+\team{Unexpected value}{Maxim Kuzin, Loc Tran, Semyon Stepanov}
 % \contest{ACM-ICPC World Finals 2017}{May 24, 2017}
 \contest{\ }{\today}
 % \enablecolors
 
+\pagestyle{fancy}
 \begin{document}
-	\maketeampage
+	% \maketeampage  
 	% Small KACTL header on the first page:
-	% \maketitle{``One Last Time'' Edition}{\today}
-	\begin{multicols*}{3}
-	\thispagestyle{fancy}
-	% Table of contents, without subsections:
+	% \maketitle{``One Last Time'' Edition}{\today} 
+	% \thispagestyle{fancy}  
+	% Table of contents, without subsections: 
 	\setcounter{tocdepth}{0}
-	\tableofcontents
+	\begin{multicols*}{2} 
+    \tableofcontents\thispagestyle{fancy}
 
 	\kactlchapter{contest}
 	\kactlchapter{math}
@@ -28,9 +29,7 @@
 	\kactlchapter{geometry}
 	\kactlchapter{strings}
 	\kactlchapter{various}
-	\end{multicols*}
 
-	\begin{multicols*}{3}
 	\kactlchapter{appendix}
-	\end{multicols*}
+	\end{multicols*} 
 \end{document}
