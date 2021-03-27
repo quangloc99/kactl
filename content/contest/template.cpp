@@ -3,6 +3,7 @@ using namespace std;
 #define rep(i, a, b) for(int i = a; i < (b); ++i)
 #define all(x) begin(x), end(x)
 #define sz(x) (int)(x).size()
+#define db(x) "["<<(#x)<<" = " << (x) << "] "
 using ll = long long;
 using ld = long double;
 using pii = pair<int, int>;
