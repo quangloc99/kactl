@@ -5,7 +5,8 @@
  * Source: https://codeforces.com/blog/entry/83467
  * Description: Transform a data structure with stack-like undo operation to
  * ds with ONLINE queue-like undo operation.
- * Time: Amortized $O(\log N \times C)$ ($C$ = cost of the inner DS)
+ * Time: Amortized $O(\log N \times C)$ ($C$ = cost of the inner DS).
+ * Seem to be faster in practice (from the actual author).
  * Status: Stress-tested
  */
 #pragma once
@@ -20,7 +21,7 @@ template<class DS, class Upd> struct QueueUndo {
 	void undo() {
 		inc_bot();
 	  /// no more A's, let's reverse and begin again.
-		if (bot == sz(s)) reverse_updates();
+		if (bot == sz(s)) rev_upd();
 		fix(); data.undo(); s.pop_back();
 	}
 private:	
@@ -46,7 +47,7 @@ private:
 			}
 		inc_bot();
 	}
-	void reverse_updates() {
+	void rev_upd() {
 		rep(i, 0, sz(s)) data.undo();
 		for (int i = sz(s); i--; ) {
 			data.accept(s[i].second);
@@ -58,7 +59,7 @@ private:
 };
 
 void example() {
-	using Upd = uint32_t; // can be a struct if need more params
+	using Upd = uint32_t; // can be a struct if more params needed.
   // data structure that maintains `and` of all contained numbers.
 	struct DS {
 		vector<uint32_t> st;
