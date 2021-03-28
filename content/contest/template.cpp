@@ -1,6 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define rep(i, a, b) for(int i = a; i < (b); ++i)
+#ifndef LOCAL
+#define clog if (0) cout
+#endif
+#define rep(i,a,b) for(int i = a; i < (b); ++i)
 #define all(x) begin(x), end(x)
 #define sz(x) (int)(x).size()
 #define db(x) "["<<(#x)<<" = " << (x) << "] "
